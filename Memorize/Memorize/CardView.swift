@@ -1,8 +1,8 @@
 //
 //  CardView.swift
-//  Memorise
+//  Memorize
 //
-//  Created by Sharma on 19/12/2023.
+//  Created by Sharma on 10/01/2024.
 //
 
 import SwiftUI
@@ -30,5 +30,6 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView()
+    ContentView()
 }
+

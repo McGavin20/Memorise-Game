@@ -1,14 +1,14 @@
 //
-//  MemoriseApp.swift
-//  Memorise
+//  MemorizeApp.swift
+//  Memorize
 //
-//  Created by Sharma on 19/12/2023.
+//  Created by Sharma on 10/01/2024.
 //
 
 import SwiftUI
 
 @main
-struct MemoriseApp: App {
+struct MemorizeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
