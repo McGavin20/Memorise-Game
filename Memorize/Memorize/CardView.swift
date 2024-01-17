@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CardView: View {
     
-    @State var isFaceUp = true
+    let card: MemorizeModel<String>.Card
     
-    let content: String
+    init(_ card: MemorizeModel<String>.Card) {
+        self.card = card
+    }
     
     var body: some View {
         ZStack {
@@ -20,12 +22,14 @@ struct CardView: View {
             Group {
                 base.fill(.white)
                 base.strokeBorder(lineWidth: 2)
-                Text(content).font(.largeTitle)
-            } .opacity(isFaceUp ? 1 : 0)
-            base.fill().opacity(isFaceUp ? 0 : 1)
-        }
-        .onTapGesture {
-            isFaceUp.toggle()
+                Text(card.content)
+                    .font(.system(size: 200))
+                    .minimumScaleFactor(0.01)
+                    .aspectRatio(1, contentMode: .fit)
+            }
+                .opacity(card.isFaceUp ? 1 : 0)
+            base.fill()
+                .opacity(card.isFaceUp ? 0 : 1)
         }
     }
 }
